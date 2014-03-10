@@ -1,0 +1,19 @@
+<h4>Please sign up below</h4>
+
+<%= form_for :user, url: users_path do |f| %>
+  <p>
+      <%= f.label :email  %><br>
+      <%= f.text_field :email, :placeholder => "email" %>
+  </p>
+  <p>
+      <%= f.label :password %><br>
+      <%= f.password_field :password, :placeholder => "password" %>
+  </p>
+  <p>
+      <%= f.label :password_confirmation %><br>
+      <%= f.password_field :password_confirmation, :placeholder => "confirm password" %>
+  </p>
+  <p>
+      <%= f.submit %>
+  </p>
+<% end %>
