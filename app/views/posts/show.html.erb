@@ -1,11 +1,13 @@
 URL: <%= link_to 'Here is your fucking button', "http://#{@post.url}" %><br><br>
 
 Title: <%= @post.title %><br>
-Body: <%= @post.body %>
+Body: <%= @post.body %><br>
+<%= link_to "edit post", edit_post_path(@post) %>
 <p>Comments:</p>
 <% @comments.each do |comment| %>
   <p><%= comment.text %></p>
-  <p><%= comment.user_id %></p>
+  <%= link_to "edit comment", edit_post_comment_path(comment.post, comment) %>
+  <%= link_to 'delete comment', [comment.post, comment], method: :delete, data: { confirm: 'YES?!' } %>
 <% end %>
 
 <%= form_for ([@post, @post.comments.build]) do |f| %>
@@ -17,3 +19,5 @@ Body: <%= @post.body %>
   <%= f.submit %>
 </p>
 <% end %>
+
+<%= link_to 'home', root_path %>

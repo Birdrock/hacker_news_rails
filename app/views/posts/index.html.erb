@@ -1,14 +1,19 @@
 Hacker News blah blah<br>
-<%= link_to "Sign In", login_path %>
-<%= link_to "Sign Up", new_user_path %>
 
-<%= link_to "Post", new_post_path if current_user? %>
-<%= link_to "Logout", session_path(session), method: :delete, data: { confirm: 'Are you sure you want to poodle?' } if current_user? %>
+<% if current_user? %>
+<%=	link_to "Sign Out", session_path(session), method: :delete, data: { confirm: 'Are you sure you want to poodle?' } %>
+<%= link_to "Post", new_post_path %>
+<%	else %>
+<%=	link_to "Sign In", login_path %>
+<%=	link_to "Sign Up", new_user_path %>
+<% end %>
 
 <ul>
   <% @posts.each do |post| %>
     <li><div><%= link_to "#{post.title}", "http://#{post.url}" %><br>
         <%= link_to "view post", post_path(post) %>
+        <%= link_to "edit post", edit_post_path(post) %>
+        <%= link_to "delete post", post_path(post), method: :delete, data: { confirm: 'Sure?!' } %>
     </div>
 
     </li>
