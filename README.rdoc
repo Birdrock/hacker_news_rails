@@ -1,28 +1,7 @@
-== README
+== Hacker News Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This exercise was done as part of the curriculum at Dev Bootcamp.
+It is an unfinished product and has been abondoned for the current time.
 
-Things you may want to cover:
+For a more relevant repository, check out: https://github.com/devdame/DBC-final-project
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
