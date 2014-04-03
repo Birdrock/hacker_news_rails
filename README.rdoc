@@ -1,7 +1,7 @@
 == Hacker News Rails
 
 This exercise was done as part of the curriculum at Dev Bootcamp.
-It is an unfinished product and has been abondoned for the current time.
+It is an unfinished product and has been abandoned for the current time.
 
 For a more relevant repository, check out: https://github.com/devdame/DBC-final-project
 
